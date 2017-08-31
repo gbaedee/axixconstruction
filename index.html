@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+	<head>
+		<title>i'm coming </title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<style>
+		/* reset */
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+		article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+		ol,ul{list-style:none;margin:0px;padding:0px;}
+		blockquote,q{quotes:none;}
+		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+		table{border-collapse:collapse;border-spacing:0;}
+		/* start editing from here */
+		a{text-decoration:none;}
+		.txt-rt{text-align:right;}/* text align right */
+		.txt-lt{text-align:left;}/* text align left */
+		.txt-center{text-align:center;}/* text align center */
+		.float-rt{float:right;}/* float right */
+		.float-lt{float:left;}/* float left */
+		.clear{clear:both;}/* clear float */
+		.pos-relative{position:relative;}/* Position Relative */
+		.pos-absolute{position:absolute;}/* Position Absolute */
+		.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+		.vertical-top{	vertical-align:top;}/* vertical align top */
+		nav.vertical ul li{	display:block;}/* vertical menu */
+		nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+		img{max-width:100%;}
+		/*end reset*/
+		@font-face {
+		    font-family: 'bebasregular';
+		    src: url('../fonts/BEBAS___-webfont.eot');
+		    src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../fonts/BEBAS___-webfont.woff') format('woff'),
+		         url('../fonts/BEBAS___-webfont.ttf') format('truetype'),
+		         url('../fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		body{
+			background: url(../images/bg.jpg) no-repeat #E7E7E7;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			font-family: 'bebasregular';
+		}
+		.wrap{
+			width:80%;
+			margin:0 auto;
+		}
+		/*----start-header----*/
+		.header{
+			padding:20px;
+			background:#2980B9;
+		}
+		.logo a{
+			color:#FFF;
+			font-size:3em;
+			text-transform:uppercase;
+		}
+		.logo a span{
+			color:#3498DB;
+		}
+		/*---start-content----*/
+		.content{
+			text-align:center;
+		}
+		.content-info h1{
+			color: #FFF;
+			font-size: 3em;
+			text-transform: uppercase;
+			line-height: 1.5em;
+			word-spacing: 2px;
+		}
+		.content-info h1 span{
+			color:#3498DB;
+		}
+		.content-info {
+			width: 59%;
+			margin: 0 auto;
+			padding: 4em 0 0 0;
+		}
+		/*----start-responsive-design----*/
+
+		@media only screen and (max-width: 1366px) and (min-width: 1280px) {
+			.wrap{
+				width:95%;
+			}
+			.content-info {
+				width: 57%;
+			}
+		}
+		@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+			.wrap{
+				width:95%;
+			}
+			.content-info {
+				width: 61%;
+			}
+		}
+		@media only screen and (max-width: 1024px) and (min-width: 768px) {
+			.wrap{
+				width:95%;
+			}
+			.content-info {
+				width: 77%;
+			}
+			.notify input[type="text"] {
+				width: 77%;
+			}
+
+		}
+		@media only screen and (max-width: 768px) and (min-width: 640px) {
+			.wrap{
+				width:95%;
+			}
+			.content-info {
+				width: 77%;
+				padding: 2em 0 0 0;
+			}
+			.notify input[type="text"] {
+				width: 76%;
+
+		}
+
+
+		</style>
+		<!---start-wrap---->
+			<div class="header">
+				<div class="wrap">
+					<div class="logo"><a href="#">I'am <span>coming</span></a></div>
+				</div>
+		</div>
+		<!---start-content---->
+		<div class="content">
+			<div class="content-info">
+				<h1>Our new, <span>AWESOME WEBSIT</span>E is almost ready.</h1>
+			</div>
+		</div>
+		<!---End-content---->
+		<!---End-wrap---->
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script src="style/style.js"</script>
+	</body>
+</html>
