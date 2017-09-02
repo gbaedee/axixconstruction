@@ -1,148 +1,709 @@
-<!DOCTYPE HTML>
-	<head>
-		<title>i'm coming </title>
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-	</head>
-	<body>
-		<style>
-		/* reset */
-		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-		article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
-		ol,ul{list-style:none;margin:0px;padding:0px;}
-		blockquote,q{quotes:none;}
-		blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
-		table{border-collapse:collapse;border-spacing:0;}
-		/* start editing from here */
-		a{text-decoration:none;}
-		.txt-rt{text-align:right;}/* text align right */
-		.txt-lt{text-align:left;}/* text align left */
-		.txt-center{text-align:center;}/* text align center */
-		.float-rt{float:right;}/* float right */
-		.float-lt{float:left;}/* float left */
-		.clear{clear:both;}/* clear float */
-		.pos-relative{position:relative;}/* Position Relative */
-		.pos-absolute{position:absolute;}/* Position Absolute */
-		.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
-		.vertical-top{	vertical-align:top;}/* vertical align top */
-		nav.vertical ul li{	display:block;}/* vertical menu */
-		nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
-		img{max-width:100%;}
-		/*end reset*/
-		@font-face {
-		    font-family: 'bebasregular';
-		    src: url('../fonts/BEBAS___-webfont.eot');
-		    src: url('../fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
-		         url('../fonts/BEBAS___-webfont.woff') format('woff'),
-		         url('../fonts/BEBAS___-webfont.ttf') format('truetype'),
-		         url('../fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
-		    font-weight: normal;
-		    font-style: normal;
 
-		}
-		body{
-			background: url(../images/bg.jpg) no-repeat #E7E7E7;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-position: center;
-			background-size: cover;
-			font-family: 'bebasregular';
-		}
-		.wrap{
-			width:80%;
-			margin:0 auto;
-		}
-		/*----start-header----*/
-		.header{
-			padding:20px;
-			background:#2980B9;
-		}
-		.logo a{
-			color:#FFF;
-			font-size:3em;
-			text-transform:uppercase;
-		}
-		.logo a span{
-			color:#3498DB;
-		}
-		/*---start-content----*/
-		.content{
-			text-align:center;
-		}
-		.content-info h1{
-			color: #FFF;
-			font-size: 3em;
-			text-transform: uppercase;
-			line-height: 1.5em;
-			word-spacing: 2px;
-		}
-		.content-info h1 span{
-			color:#3498DB;
-		}
-		.content-info {
-			width: 59%;
-			margin: 0 auto;
-			padding: 4em 0 0 0;
-		}
-		/*----start-responsive-design----*/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Axix Construction</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Automation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- for the browser icon-->
+<link rel="icon" href="Images/gears.png">
 
-		@media only screen and (max-width: 1366px) and (min-width: 1280px) {
-			.wrap{
-				width:95%;
-			}
-			.content-info {
-				width: 57%;
-			}
-		}
-		@media only screen and (max-width: 1280px) and (min-width: 1024px) {
-			.wrap{
-				width:95%;
-			}
-			.content-info {
-				width: 61%;
-			}
-		}
-		@media only screen and (max-width: 1024px) and (min-width: 768px) {
-			.wrap{
-				width:95%;
-			}
-			.content-info {
-				width: 77%;
-			}
-			.notify input[type="text"] {
-				width: 77%;
-			}
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+		$(".scroll").click(function (event) {
+			event.preventDefault();
+			$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
 
-		}
-		@media only screen and (max-width: 768px) and (min-width: 640px) {
-			.wrap{
-				width:95%;
-			}
-			.content-info {
-				width: 77%;
-				padding: 2em 0 0 0;
-			}
-			.notify input[type="text"] {
-				width: 76%;
-
-		}
-
-
-		</style>
-		<!---start-wrap---->
-			<div class="header">
-				<div class="wrap">
-					<div class="logo"><a href="#">I'am <span>coming</span></a></div>
+<body>
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="logo">
+				<img src="images/axixlogo.png">
+			</div>
+			<div class="banner-info">
+				<img class="bigger" src="images/six_as.png">
+				<div class="more exporter">
+					<a href="#" class="hvr-bounce-to-top">Read More</a>
 				</div>
-		</div>
-		<!---start-content---->
-		<div class="content">
-			<div class="content-info">
-				<h1>Our new, <span>AWESOME WEBSIT</span>E is almost ready.</h1>
 			</div>
 		</div>
-		<!---End-content---->
-		<!---End-wrap---->
-		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-		<script src="style/style.js"</script>
-	</body>
+	</div>
+	</div>
+<!-- //banner -->
+<!-- sticky-nav -->
+	<div class="banner-bottom">
+	<div class="container">
+		<div class="fixed-header">
+			<div class="banner-bottom-nav">
+				<span class="menu"><img src="images/menu.png" alt=" "/></span>
+					<div class="home-logo">
+						<a href="index.html"> <img src="images/trans.png" alt=" "/></a>
+					</div>
+						<nav class="cl-effect-1">
+							<ul class="nav1 center">
+								<li><a class="scroll" href="#about">About Us</a></li>
+								<li><a class="scroll" href="#services">Services</a></li>
+								<li><a class="scroll" href="#projects">Projects</a></li>
+								<li><a class="scroll" href="#products">Products</a></li>
+								<li><a class="scroll" href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+			</div>
+					<!-- script for menu -->
+					<script>
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						 // Animation complete.
+						});
+						});
+					</script>
+					<!-- //script for menu -->
+
+						<!-- script-for sticky-nav -->
+						<script>
+						$(document).ready(function() {
+							 var navoffeset=$(".banner-bottom").offset().top;
+							 $(window).scroll(function(){
+								var scrollpos=$(window).scrollTop();
+								if(scrollpos >=navoffeset){
+									$(".banner-bottom").addClass("fixed");
+								}else{
+									$(".banner-bottom").removeClass("fixed");
+								}
+							 });
+
+						});
+						</script>
+					<!-- //script-for sticky-nav -->
+		</div>
+
+	</div>
+	</div>
+<!-- //sticky-nav -->
+<!-- welcome-company -->
+	<div class="welcome-company">
+		<div class="container">
+			<div class="welcome-company-grids">
+				<div class="col-md-4 welcome-company-grid-left">
+					<div class="company-grids">
+						<div class="company-grid">
+							<img src="images/1.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/2.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/5.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="clearfix"> </div>
+						<div class="company-grid">
+							<img src="images/3.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/4.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/6.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-8 welcome-company-grid-right">
+					<h3>Welcome To Our Company</h3>
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+						officia deserunt mollit anim id est laborum. Nam libero tempore,
+						cum soluta nobis est eligendi optio cumque nihil impedit quo minus
+						id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+						omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
+						debitis aut rerum necessitatibus saepe eveniet.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //welcome-company -->
+<!-- about -->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-6 about-grid-left">
+					<h3>About Us</h3>
+					<img src="images/7.jpg" alt=" " class="img-responsive"/>
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus
+						qui blanditiis praesentium.Sed ut perspiciatis unde omnis iste natus
+						error sit voluptatem accusantium doloremque laudantium.</p>
+						<div class="company-grids">
+							<div class="company-grid">
+								<img src="images/1.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/2.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/5.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="clearfix"> </div>
+							<div class="company-grid">
+								<img src="images/3.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/4.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/6.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+				</div>
+				<div class="col-md-6 about-grid-right">
+					<h3>Mission Statements</h3>
+					<div class="col-sm-2 about-grid-lft">
+						<p>1</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Nam libero tempore, cum soluta nobis est
+								eligendi optio cumque aut perferendis</h4>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="col-sm-2 about-grid-lft">
+						<p>2</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Sapiente libero tempore, cum soluta nobis est
+								eligendi optio cumque aut perferendis</h4>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="col-sm-2 about-grid-lft">
+						<p>3</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Debitis libero tempore, cum soluta nobis est
+								eligendi optio cumque aut perferendis</h4>
+						<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="testimonials">
+				<h3>Testimonials</h3>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non
+						recusandae.</p>
+					<h4>Mark Flix</h4>
+				</div>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non
+						recusandae.</p>
+					<h4>Mark Carl</h4>
+				</div>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non
+						recusandae.</p>
+					<h4>James Frik</h4>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="team">
+			<div class="container">
+				<h3>Meet Our Team</h3>
+				<div class="col-md-4 team-grid">
+					<img src="images/3.png" alt=" " class="img-responsive" />
+					<h4>Priston<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 team-grid">
+					<img src="images/5.png" alt=" " class="img-responsive" />
+					<h4>John Franklin<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 team-grid">
+					<img src="images/4.png" alt=" " class="img-responsive" />
+					<h4>Lara Mark<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //about -->
+<!--divider img-->
+<div class="pimg0">
+	<div class="ptext">
+		<span class="border">
+			Our Services
+		</span>
+	</div>
+</div>
+<!-- //divider img -->
+<!-- services -->
+	<div id="services" class="services">
+		<div class="container">
+			<div class="services-grids">
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="gear">
+							<span> </span>
+						</div>
+							<h3>eligendi cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus maiores alias consequatur aut
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="men">
+							<span> </span>
+						</div>
+							<h3>repellat cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus maiores alias consequatur aut
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="rupee">
+							<span> </span>
+						</div>
+							<h3>sapiente cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus maiores alias consequatur aut
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="truck">
+							<span> </span>
+						</div>
+							<h3>maiores cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus maiores alias consequatur aut
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="our">
+		<div class="container">
+			<div class="our-main">
+				<div class="our-text">
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						<h4>Integer viverra ut libero eget convallis.</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+						<h4>Quisque venenatis volutpat ipsum at</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+						<h4>Vivamus convallis a felis ut sodales</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="our-text">
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<h4>molestias excepturi occaecati cupiditate</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						<h4>Nam porta erat vitae neque imperdiet</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+						<h4>Mauris efficitur enim in nunc eleifend</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+<!--divider img-->
+<div class="pimg1">
+	<div class="ptext">
+		<span class="border">
+			Recent Projects
+		</span>
+	</div>
+</div>
+<!-- //divider img -->
+<!-- projects -->
+	<div id="projects" class="projects">
+		<div class="container">
+			<div class="project-grids">
+				<ul id="flexiselDemo1">
+					<li>
+						<div class="project-grid">
+							<img src="images/2.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/3.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/4.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/6.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems: 4,
+									animationSpeed: 1000,
+									autoPlay: true,
+									autoPlaySpeed: 3000,
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: {
+										portrait: {
+											changePoint:480,
+											visibleItems: 1
+										},
+										landscape: {
+											changePoint:640,
+											visibleItems:3
+										},
+										tablet: {
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+
+							});
+					</script>
+					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+			</div>
+		</div>
+	</div>
+<!-- //projects -->
+<!--divider img-->
+<div class="pimg2">
+	<div class="ptext">
+		<span class="border">
+			Our Products
+		</span>
+	</div>
+</div>
+<!-- //divider img -->
+<!-- products -->
+	<div id="products" class="products">
+		<div class="container">
+			<div class="product-grids">
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/13.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/13.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/8.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/8.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/9.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/9.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="product-grids">
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/10.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/10.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/11.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/11.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/12.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/12.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus,
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+					<link rel="stylesheet" href="css/swipebox.css">
+						<script src="js/jquery.swipebox.min.js"></script>
+							<script type="text/javascript">
+								jQuery(function($) {
+									$(".swipebox").swipebox();
+								});
+							</script>
+			</div>
+		</div>
+	</div>
+<!-- //products -->
+<!--divider img-->
+<div class="pimg3">
+	<div class="ptext">
+		<span class="border">
+			Our Contact
+		</span>
+	</div>
+</div>
+<!-- //divider img -->
+<!-- contact -->
+	<div id="contact" class="contact">
+		<div class="container">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.465386480095!2d-95.36148523571009!3d29.721764475488865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bfa6bde6b781%3A0x66af5befc63f4b2b!2sTexas+Southern+University!5e0!3m2!1sen!2sus!4v1504339115146" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<div class="map-color">
+					<div class="contact-info">
+						<h4>Contact Info</h4>
+						<br>
+						<img src="images/axixlogo.png">
+						<br>
+						<p>3100 Cleburne St,
+							<span>Houston, TX 77004</span>
+							Phone Number: (281) 871-9827</p>
+						<form>
+							<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+							<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+							<input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
+							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+							<input type="submit" value="Send Message">
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //contact -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-6 footer-grid-left">
+					<h3>Welcome</h3>
+					<img src="images/14.jpg" alt=" " class="img-responsive" />
+					<h4>Nam libero tempore, cum soluta nobis est eligendi optio
+						cumque nihil impedit quo minus id quod maxime placeat
+						facere possimus</h4>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum
+						necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+						molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+						delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+						perferendis doloribus asperiores repellat.</p>
+					<div class="maiores">
+						<ul>
+							<li><a href="#" class="f"> </a></li>
+							<li><a href="#" class="t"> </a></li>
+							<li><a href="#" class="g1"> </a></li>
+							<li><a href="#" class="in1"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 footer-grid-right">
+					<h3>Overview</h3>
+					<p>Itaque earum rerum hic tenetur a sapiente
+						delectus, ut aut reiciendis  optio cumque nihil impedit quo
+						minus id quod maxime placeat facere possimus, omnis voluptas
+						assumenda est, omnis dolor repellendus voluptatibus maiores alias
+						consequatur aut perferendis doloribus asperiores repellat.</p>
+					<div class="footer-grid-right-grids">
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/10.jpg" alt=" " class="img-responsive" />
+							<h4>voluptatibus maiores alias</h4>
+						</div>
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/11.jpg" alt=" " class="img-responsive" />
+							<h4>omnis dolor repellendus</h4>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="footer-grid-right-grids">
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/12.jpg" alt=" " class="img-responsive" />
+							<h4>asperiores maiores alias</h4>
+						</div>
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/13.jpg" alt=" " class="img-responsive" />
+							<h4>repellendus dolor repellendus</h4>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<p>Copyright ©></a></p>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
 </html>
