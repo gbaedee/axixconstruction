@@ -20,7 +20,8 @@ body a:hover{
 }
 /*-- banner --*/
 .banner{
-  background-image: url(../images/main.jpg);
+  background-image: url(../images/main.png);
+
   position: relative;
   background-position: center;
   background-size:100%;
@@ -34,9 +35,9 @@ body a:hover{
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:850px;
+	min-height:960px;
 	padding:4em 0 0;
-}
+  z-index: 1;
 }
 .logo a{
 	display:block;
